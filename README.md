@@ -4,9 +4,9 @@
 
 # Allokatr
 
-**See where your next euro goes.**
+**Give your next euro a job.**
 
-A self-hosted portfolio planner for [Parqet](https://parqet.com) and [Interactive Brokers](https://www.interactivebrokers.com/) holdings. Set allocation targets and test changes before you trade.
+Bring your [Parqet](https://parqet.com) or [Interactive Brokers](https://www.interactivebrokers.com/) holdings into Allokatr, set the portfolio mix you want, and see how your next contribution could move you toward it. Run the planner on your own setup and try out changes before you trade.
 
 [Explore the planner](#what-you-can-do) · [Quick start](#quick-start) · [Under the hood](#under-the-hood)
 
@@ -34,6 +34,9 @@ Requires Python 3.11+ and Node.js 22.
 ```bash
 git clone https://github.com/icon3333/Allokatr.git
 cd Allokatr
+python3 -m venv venv && source venv/bin/activate
+python -m pip install --upgrade "pip>=26.1.2"
+python -m pip install -r requirements.txt
 ./dev.sh
 ```
 
