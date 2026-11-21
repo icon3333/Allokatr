@@ -2,7 +2,7 @@
 
 # Allokatr
 
-**See where your next euro goes.** Import holdings from [Parqet](https://parqet.com) and [Interactive Brokers](https://www.interactivebrokers.com/), set allocation targets, and test changes before you trade.
+**Give your next euro a job.** Bring your [Parqet](https://parqet.com) or [Interactive Brokers](https://www.interactivebrokers.com/) holdings into Allokatr, set the portfolio mix you want, and see how your next contribution could move you toward it. Run the planner on your own setup and try out changes before you trade.
 
 **Self-hosted · Single-user** &nbsp;|&nbsp; [What you can do](#what-you-can-do) · [Quick start](#quick-start) · [Under the hood](#under-the-hood)
 
