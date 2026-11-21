@@ -1,14 +1,20 @@
-<p align="center"><img src="docs/assets/allokatr-logo.png" width="64" height="64" alt="Allokatr A monogram"></p>
+<div align="center">
+
+<img src="docs/assets/allokatr-logo.png" width="64" height="64" alt="Allokatr A monogram">
 
 # Allokatr
 
-**Give your next euro a job.** Bring your [Parqet](https://parqet.com) or [Interactive Brokers](https://www.interactivebrokers.com/) holdings into Allokatr, set the portfolio mix you want, and see how your next contribution could move you toward it. Run the planner on your own setup and try out changes before you trade.
+**Give your next euro a job.**
 
-**Self-hosted · Single-user** &nbsp;|&nbsp; [What you can do](#what-you-can-do) · [Quick start](#quick-start) · [Under the hood](#under-the-hood)
+Bring your [Parqet](https://parqet.com) or [Interactive Brokers](https://www.interactivebrokers.com/) holdings into Allokatr, set the portfolio mix you want, and see how your next contribution could move you toward it. Run the planner on your own setup and try out changes before you trade.
+
+[Explore the planner](#what-you-can-do) · [Quick start](#quick-start) · [Under the hood](#under-the-hood)
 
 ![Illustrated preview of the Allokatr Plan view comparing current and target ETF, stock, and crypto allocations with demo data. Not a screenshot.](docs/assets/allokatr-overview.png)
 
 <sub>Illustrated preview with demo data, not an app screenshot.</sub>
+
+</div>
 
 ## What you can do
 
@@ -28,6 +34,9 @@ Requires Python 3.11+ and Node.js 22.
 ```bash
 git clone https://github.com/icon3333/Allokatr.git
 cd Allokatr
+python3 -m venv venv && source venv/bin/activate
+python -m pip install --upgrade "pip>=26.1.2"
+python -m pip install -r requirements.txt
 ./dev.sh
 ```
 
@@ -64,7 +73,7 @@ Everything has sensible defaults — just run `python3 run.py` and it generates 
 
 ### Data & access
 
-Data persists in `./instance`. Session-based auth, no passwords — this assumes a homeserver, not the open internet. Review before exposing publicly.
+Allokatr is designed for one user on a homeserver. Data persists in `./instance`. Authentication uses sessions without passwords; keep it off the public internet unless you’ve reviewed access controls.
 
 ### Security
 
@@ -73,16 +82,10 @@ Data persists in `./instance`. Session-based auth, no passwords — this assumes
 - Inputs validated, structured exceptions throughout
 - `.env` gitignored, secrets auto-generated
 
----
+## Feedback
 
-## Feedback & contributing
-
-I'm not a professional developer — this started as a weekend experiment and turned into something I rely on daily. If something's broken, dumb, or could be better: **open an issue, submit a PR, suggest a feature.** No contribution too small, no question too basic.
+If an import misreads your holdings or a rebalance looks wrong, [open an issue](https://github.com/icon3333/Allokatr/issues) or send a PR.
 
 ## License
 
-[MIT](LICENSE) — do whatever you want.
-
----
-
-*Built with curiosity, caffeine, and an embarrassing amount of Claude. Happy rebalancing.*
+[MIT](LICENSE).
