@@ -1,14 +1,20 @@
-<p align="center"><img src="docs/assets/allokatr-logo.png" width="64" height="64" alt="Allokatr A monogram"></p>
+<div align="center">
+
+<img src="docs/assets/allokatr-logo.png" width="64" height="64" alt="Allokatr A monogram">
 
 # Allokatr
 
-**See where your next euro goes.** Import holdings from [Parqet](https://parqet.com) and [Interactive Brokers](https://www.interactivebrokers.com/), set allocation targets, and test changes before you trade.
+**See where your next euro goes.**
 
-**Self-hosted · Single-user** &nbsp;|&nbsp; [What you can do](#what-you-can-do) · [Quick start](#quick-start) · [Under the hood](#under-the-hood)
+A self-hosted portfolio planner for [Parqet](https://parqet.com) and [Interactive Brokers](https://www.interactivebrokers.com/) holdings. Set allocation targets and test changes before you trade.
+
+[Explore the planner](#what-you-can-do) · [Quick start](#quick-start) · [Under the hood](#under-the-hood)
 
 ![Illustrated preview of the Allokatr Plan view comparing current and target ETF, stock, and crypto allocations with demo data. Not a screenshot.](docs/assets/allokatr-overview.png)
 
 <sub>Illustrated preview with demo data, not an app screenshot.</sub>
+
+</div>
 
 ## What you can do
 
@@ -64,7 +70,7 @@ Everything has sensible defaults — just run `python3 run.py` and it generates 
 
 ### Data & access
 
-Data persists in `./instance`. Session-based auth, no passwords — this assumes a homeserver, not the open internet. Review before exposing publicly.
+Allokatr is designed for one user on a homeserver. Data persists in `./instance`. Authentication uses sessions without passwords; keep it off the public internet unless you’ve reviewed access controls.
 
 ### Security
 
@@ -73,16 +79,10 @@ Data persists in `./instance`. Session-based auth, no passwords — this assumes
 - Inputs validated, structured exceptions throughout
 - `.env` gitignored, secrets auto-generated
 
----
+## Feedback
 
-## Feedback & contributing
-
-I'm not a professional developer — this started as a weekend experiment and turned into something I rely on daily. If something's broken, dumb, or could be better: **open an issue, submit a PR, suggest a feature.** No contribution too small, no question too basic.
+If an import misreads your holdings or a rebalance looks wrong, [open an issue](https://github.com/icon3333/Allokatr/issues) or send a PR.
 
 ## License
 
-[MIT](LICENSE) — do whatever you want.
-
----
-
-*Built with curiosity, caffeine, and an embarrassing amount of Claude. Happy rebalancing.*
+[MIT](LICENSE).
