@@ -1,50 +1,37 @@
+<p align="center"><img src="docs/assets/allokatr-logo.png" width="64" height="64" alt="Allokatr A monogram"></p>
+
 # Allokatr
 
-**The portfolio tool [Parqet](https://parqet.com) and [IBKR](https://www.interactivebrokers.com/) don't give you.**
+**See where your next euro goes.** Import holdings from [Parqet](https://parqet.com) and [Interactive Brokers](https://www.interactivebrokers.com/), set allocation targets, and test changes before you trade.
 
-Import your positions, set your targets, and get actual answers to the questions that matter: *What do I buy next? Am I over-concentrated? What if I shifted 5% into crypto?*
+**Self-hosted · Single-user** &nbsp;|&nbsp; [What you can do](#what-you-can-do) · [Quick start](#quick-start) · [Under the hood](#under-the-hood)
 
-Self-hosted. Single-user. No subscriptions, no trackers, no fluff.
+![Illustrated preview of the Allokatr Plan view comparing current and target ETF, stock, and crypto allocations with demo data. Not a screenshot.](docs/assets/allokatr-overview.png)
 
----
+<sub>Illustrated preview with demo data, not an app screenshot.</sub>
 
-## Why you'd want this
+## What you can do
 
-You already have a broker. What you don't have is a fast way to answer:
+| Question | Where Allokatr helps |
+| :--- | :--- |
+| Where should my next €1,000 go? | **Plan:** Set targets, track your budget, and see potential buys or sells under stock, ETF, and crypto constraints. |
+| Am I too concentrated? | **Concentrations:** Check the allocation heatmap across portfolios. |
+| What if I shift 5% into crypto? | **Simulator:** Compare changes against your portfolio in Overlay or use a standalone Sandbox. Neither changes your actual holdings. |
+| How is this position doing, and why did I buy it? | **Performance and thesis notes:** Track portfolio metrics, per-position P&L and the rationale for each holding. |
 
-- **"Where should this €1,000 go?"** — Allokatr tells you, across all your accounts, respecting your type constraints (Stock / ETF / Crypto).
-- **"Am I accidentally 40% in one sector?"** — Concentration heatmaps across portfolios, not just per account.
-- **"What if I sell this and buy that?"** — Sandbox simulator. Clone your portfolio, mess with it, compare deltas. Nothing touches the real numbers.
-- **"How is this thesis actually doing?"** — P&L per position with your written rationale attached. Stop rediscovering why you bought the dip in 2023.
-- **"What do I still need to build?"** — Budget-goal Builder tracks progress toward your target allocations.
-
-## What it does
-
-- **One-click import** — Parqet CSVs and IBKR Flex Queries, auto-detected. Reimport anytime without losing manual edits.
-- **Manual positions** — Add anything: unlisted stocks, pre-IPO, crypto you hold off-exchange. Optional yfinance lookup.
-- **Rebalancer** — Buy/sell recommendations across multiple allocation strategies, per-type.
-- **Simulator** — Two modes: Overlay (see deltas on your real portfolio) and Sandbox (standalone what-if).
-- **Performance** — Absolute + % P&L per position, portfolio-wide metrics.
-- **Concentrations** — Global allocation heatmap across all portfolios.
-- **Builder** — Investment targets, budget planning, progress tracking.
-- **Enrichment** — Live prices, custom values for the unlisted stuff, multi-currency with daily FX refresh.
-- **Thesis tracking** — Write *why* you bought it. Edit in bulk. Never forget.
-- **Cash balance** — Track uninvested cash, toggle it in/out of allocation math.
+Import Parqet CSVs or IBKR Flex exports. Add unlisted holdings or off-exchange crypto manually, set custom values, or look up listed holdings via yfinance. Track uninvested cash separately or include it in allocation calculations.
 
 ## Quick start
 
+Requires Python 3.11+ and Node.js 22.
+
 ```bash
-git clone https://github.com/icon3333/prismo.git
-cd prismo
-python3 -m venv venv && source venv/bin/activate
-python -m pip install --upgrade "pip>=26.1.2"
-python -m pip install -r requirements.txt
+git clone https://github.com/icon3333/Allokatr.git
+cd Allokatr
 ./dev.sh
 ```
 
-Backend on `:8065`, Next.js frontend on `:3000`. The app auto-creates `.env` and the SQLite DB on first run.
-
----
+Open `http://localhost:3000`. The Flask API runs on port `8065`. The app creates `.env` and the SQLite database on first run.
 
 ## Under the hood
 
